@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anjali Shibu — Data Scientist & AI Researcher</title>
+  <meta name="description" content="Portfolio of Anjali Shibu – Data Scientist, AI Researcher, and M.Sc. Data Analytics & AI." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       CURSOR (desktop only)
+  ====================================================== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ======================================================
+       NAVBAR
+  ====================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">AS<span class="dot">.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Light/Dark toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-icon sun">☀</span>
+          <span class="toggle-icon moon">◑</span>
+        </button>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about"      class="mob-link">About</a></li>
+      <li><a href="#skills"     class="mob-link">Skills</a></li>
+      <li><a href="#projects"   class="mob-link">Projects</a></li>
+      <li><a href="#experience" class="mob-link">Experience</a></li>
+      <li><a href="#contact"    class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ======================================================
+       HERO
+  ====================================================== -->
+  <section class="hero" id="hero">
+    <!-- Animated mesh background -->
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-up" style="--d:0ms">
+        <span class="badge-dot"></span>
+        Available for opportunities · Riga, Latvia
+      </div>
+
+      <h1 class="hero-name reveal-up" style="--d:120ms">
+        Anjali<br>
+        <span class="shimmer-text">Shibu</span>
+      </h1>
+
+      <p class="hero-title reveal-up" style="--d:240ms">
+        M.Sc. Data Analytics &amp; AI
+      </p>
+
+      <p class="hero-tagline reveal-up" style="--d:360ms">
+        Turning financial data into explainable intelligence —<br class="br-desk">
+        bridging 8+ years of banking with cutting-edge ML research.
+      </p>
+
+      <div class="hero-cta reveal-up" style="--d:480ms">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+
+      <!-- Stats row -->
+      <div class="hero-stats reveal-up" style="--d:600ms">
+        <div class="stat"><span class="stat-n">8+</span><span class="stat-l">Years Experience</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-n">0.997</span><span class="stat-l">AUC Score</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-n">6+</span><span class="stat-l">AI Projects</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-n">98%</span><span class="stat-l">Model Accuracy</span></div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       ABOUT
+  ====================================================== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Image side -->
+        <div class="about-image-wrap reveal-left">
+          <div class="about-img-frame">
+            <img src="photo.png" alt="Anjali Shibu" class="about-img" id="profileImg" />
+            <div class="img-glow"></div>
+          </div>
+          <!-- Floating chips -->
+          <div class="float-chip chip-1">
+            <span>🏆</span> Distinction Graduate
+          </div>
+          <div class="float-chip chip-2">
+            <span>🔬</span> XAI Researcher
+          </div>
+        </div>
+
+        <!-- Text side -->
+        <div class="about-text reveal-right">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">Research meets<br>real-world impact</h2>
+
+          <p class="about-bio">
+            I'm a data scientist and AI researcher combining 8+ years of banking expertise with academic research in explainable machine learning. My work at the intersection of <strong>credit risk</strong>, <strong>regulatory AI</strong>, and <strong>ensemble methods</strong> is shaping how financial institutions interpret and trust ML models.
+          </p>
+          <p class="about-bio">
+            My M.Sc. thesis, supervised by <em>Prof. Dr. Ekaterina Gromova (TSI Latvia)</em>, develops novel metrics quantifying SHAP instability — directly addressing compliance gaps in AI-driven lending. I also build end-to-end systems: from distributed PySpark fraud pipelines to multi-agent CrewAI architectures.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="hi-icon">🎓</div>
+              <div>
+                <strong>TSI Latvia · UWE Bristol</strong>
+                <span>M.Sc. Data Analytics & AI — 2026</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="hi-icon">🏦</div>
+              <div>
+                <strong>State Bank of India</strong>
+                <span>Senior Associate — Nov 2015 – Aug 2024</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="hi-icon">🤖</div>
+              <div>
+                <strong>Accenture AI Bootcamp</strong>
+                <span>Multi-Agent Systems — Feb 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-links">
+            <a href="https://www.linkedin.com/in/anjalishibu" target="_blank" class="social-pill">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/anjalii-s" target="_blank" class="social-pill">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a href="mailto:uzvarabyte@gmail.com" class="social-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SKILLS
+  ====================================================== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-label">Expertise</div>
+        <h2 class="section-title">Skills &amp; Technologies</h2>
+      </div>
+
+      <!-- Skill category tabs -->
+      <div class="skill-tabs reveal-up">
+        <button class="stab active" data-tab="tech">Technical</button>
+        <button class="stab" data-tab="domain">Domain</button>
+        <button class="stab" data-tab="tools">Tools</button>
+      </div>
+
+      <!-- Tech -->
+      <div class="skill-panel active" id="tab-tech">
+        <div class="skills-grid">
+          <div class="skill-bar-item reveal-up" style="--d:0ms">
+            <div class="sb-header"><span>Python</span><span class="sb-pct">92%</span></div>
+            <div class="sb-track"><div class="sb-fill" data-pct="92"></div></div>
+          </div>
+          <div class="skill-bar-item reveal-up" style="--d:60ms">
+            <div class="sb-header"><span>Machine Learning (scikit-learn, XGBoost)</span><span class="sb-pct">88%</span></div>
+            <div class="sb-track"><div class="sb-fill" data-pct="88"></div></div>
+          </div>
+          <div class="skill-bar-item reveal-up" style="--d:120ms">
+            <div class="sb-header"><span>Deep Learning (TensorFlow / Keras)</span><span class="sb-pct">80%</span></div>
+            <div class="sb-track"><div class="sb-fill" data-pct="80"></div></div>
+          </div>
+          <div class="skill-bar-item reveal-up" style="--d:180ms">
+            <div class="sb-header"><span>Explainable AI (SHAP, XAI)</span><span class="sb-pct">90%</span></div>
+            <div class="sb-track"><div class="sb-fill" data-pct="90"></div></div>
+          </div>
+          <div class="skill-bar-item reveal-up" style="--d:240ms">
+            <div class="sb-header"><span>Agentic AI (LangGraph, CrewAI, LlamaIndex)</span><span class="sb-pct">82%</span></div>
+            <div class="sb-track"><div class="sb-fill" data-pct="82"></div></div>
+          </div>
+          <div class="skill-bar-item reveal-up" style="--d:300ms">
+            <div class="sb-header"><span>PySpark / Big Data</span><span class="sb-pct">78%</span></div>
+            <div class="sb-track"><div class="sb-fill" data-pct="78"></div></div>
+          </div>
+          <div class="skill-bar-item reveal-up" style="--d:360ms">
+            <div class="sb-header"><span>SQL</span><span class="sb-pct">75%</span></div>
+            <div class="sb-track"><div class="sb-fill" data-pct="75"></div></div>
+          </div>
+          <div class="skill-bar-item reveal-up" style="--d:420ms">
+            <div class="sb-header"><span>Time Series (SARIMAX, VARX, LSTM)</span><span class="sb-pct">84%</span></div>
+            <div class="sb-track"><div class="sb-fill" data-pct="84"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Domain -->
+      <div class="skill-panel" id="tab-domain">
+        <div class="icon-grid">
+          <div class="icon-card reveal-up" style="--d:0ms"><div class="ic-icon">🏦</div><span>Credit Risk Analytics</span></div>
+          <div class="icon-card reveal-up" style="--d:60ms"><div class="ic-icon">⚖️</div><span>Regulatory Compliance (AI)</span></div>
+          <div class="icon-card reveal-up" style="--d:120ms"><div class="ic-icon">🔍</div><span>Fraud Detection</span></div>
+          <div class="icon-card reveal-up" style="--d:180ms"><div class="ic-icon">📈</div><span>Financial Forecasting</span></div>
+          <div class="icon-card reveal-up" style="--d:240ms"><div class="ic-icon">🌐</div><span>Blockchain Analytics</span></div>
+          <div class="icon-card reveal-up" style="--d:300ms"><div class="ic-icon">📊</div><span>Business Intelligence</span></div>
+          <div class="icon-card reveal-up" style="--d:360ms"><div class="ic-icon">🤖</div><span>Agentic AI Systems</span></div>
+          <div class="icon-card reveal-up" style="--d:420ms"><div class="ic-icon">🧪</div><span>Research & Experimentation</span></div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-panel" id="tab-tools">
+        <div class="icon-grid">
+          <div class="icon-card reveal-up" style="--d:0ms"><div class="ic-icon">🔗</div><span>LangChain / LangGraph</span></div>
+          <div class="icon-card reveal-up" style="--d:60ms"><div class="ic-icon">🚀</div><span>CrewAI / LlamaIndex</span></div>
+          <div class="icon-card reveal-up" style="--d:120ms"><div class="ic-icon">☁️</div><span>Azure OpenAI</span></div>
+          <div class="icon-card reveal-up" style="--d:180ms"><div class="ic-icon">🤗</div><span>Hugging Face</span></div>
+          <div class="icon-card reveal-up" style="--d:240ms"><div class="ic-icon">🔎</div><span>FAISS / DeepEval</span></div>
+          <div class="icon-card reveal-up" style="--d:300ms"><div class="ic-icon">📉</div><span>Tableau / Power BI</span></div>
+          <div class="icon-card reveal-up" style="--d:360ms"><div class="ic-icon">🌊</div><span>Streamlit / Gradio</span></div>
+          <div class="icon-card reveal-up" style="--d:420ms"><div class="ic-icon">🧮</div><span>Plotly / Matplotlib</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       PROJECTS
+  ====================================================== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-label">Work</div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-sub">A selection of research, engineering, and analytics work.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Featured large card -->
+        <div class="project-card card-featured reveal-up" style="--d:0ms">
+          <div class="pc-top">
+            <div class="pc-badges">
+              <span class="pc-badge badge-research">Master's Thesis</span>
+              <span class="pc-badge badge-featured">⭐ Featured</span>
+            </div>
+            <div class="pc-icon">🔬</div>
+          </div>
+          <h3 class="pc-title">XAI in Ensemble ML for Loan Default Prediction</h3>
+          <p class="pc-desc">Developed novel metrics to quantify SHAP instability in ensemble models for imbalanced credit risk datasets. Proposed new explainability methods addressing regulatory compliance for AI-driven lending — supervised by Prof. Dr. Ekaterina Gromova, TSI Latvia.</p>
+          <div class="pc-tags">
+            <span>SHAP</span><span>XGBoost</span><span>Imbalanced Data</span><span>Credit Risk</span><span>XAI</span>
+          </div>
+          <div class="pc-footer">
+            <span class="pc-stat">📊 Novel metrics developed</span>
+            <span class="pc-stat">🏛️ Conference planned</span>
+          </div>
+        </div>
+
+        <!-- Regular cards -->
+        <div class="project-card reveal-up" style="--d:100ms">
+          <div class="pc-top">
+            <div class="pc-badges"><span class="pc-badge badge-data">Big Data</span></div>
+            <div class="pc-icon">⛓️</div>
+          </div>
+          <h3 class="pc-title">Ethereum Fraud Detection Pipeline</h3>
+          <p class="pc-desc">Distributed ML pipeline on PySpark processing 9,000+ Ethereum transactions. Handled class imbalance across 50+ features. Achieved AUC ≈ 0.997 with SHAP explainability.</p>
+          <div class="pc-tags"><span>PySpark</span><span>RandomForest</span><span>SHAP</span><span>AUC 0.997</span></div>
+          <div class="pc-footer"><span class="pc-stat">🎯 AUC 0.997</span></div>
+        </div>
+
+        <div class="project-card reveal-up" style="--d:200ms">
+          <div class="pc-top">
+            <div class="pc-badges"><span class="pc-badge badge-ai">AI Agent</span><span class="pc-badge badge-deploy">Deployed</span></div>
+            <div class="pc-icon">🇱🇻</div>
+          </div>
+          <h3 class="pc-title">AI Agent — Latvian Financial Report Analysis</h3>
+          <p class="pc-desc">End-to-end RAG agent extracting financial KPIs from Latvian-language PDFs. Deployed on Hugging Face Spaces. Supports OpenAI, Groq, and Gemini backends.</p>
+          <div class="pc-tags"><span>RAG</span><span>Gradio</span><span>Multi-LLM</span><span>Streamlit</span></div>
+          <div class="pc-footer"><span class="pc-stat">🚀 Live on HuggingFace</span></div>
+        </div>
+
+        <div class="project-card reveal-up" style="--d:300ms">
+          <div class="pc-top">
+            <div class="pc-badges"><span class="pc-badge badge-data">Time Series</span></div>
+            <div class="pc-icon">📈</div>
+          </div>
+          <h3 class="pc-title">Currency Forecasting — Latvijas Banka</h3>
+          <p class="pc-desc">Multivariate time-series model forecasting monthly currency in circulation using 141 central bank observations. Compared Ridge, SARIMAX, VARX, and State-Space models with 21 engineered features.</p>
+          <div class="pc-tags"><span>SARIMAX</span><span>VARX</span><span>Ridge</span><span>ADF/KPSS</span></div>
+        </div>
+
+        <div class="project-card reveal-up" style="--d:400ms">
+          <div class="pc-top">
+            <div class="pc-badges"><span class="pc-badge badge-ai">Multi-Agent</span></div>
+            <div class="pc-icon">🤖</div>
+          </div>
+          <h3 class="pc-title">Content Moderation & Casting AI Agents</h3>
+          <p class="pc-desc">Orchestrator-worker multi-agent pipeline (98% accuracy) at Accenture, cutting review time from 5–10 min to 30 sec/post. Also built a movie casting assistant with actor availability optimization.</p>
+          <div class="pc-tags"><span>CrewAI</span><span>LangGraph</span><span>ReAct</span><span>DeepEval</span></div>
+          <div class="pc-footer"><span class="pc-stat">⚡ 30 sec/post</span></div>
+        </div>
+
+        <div class="project-card reveal-up" style="--d:500ms">
+          <div class="pc-top">
+            <div class="pc-badges"><span class="pc-badge badge-data">Visualization</span></div>
+            <div class="pc-icon">🗺️</div>
+          </div>
+          <h3 class="pc-title">Baltic Workforce Dashboard 2035</h3>
+          <p class="pc-desc">Interactive Tableau dashboard projecting labour market shifts in the Baltic states using Cedefop Skills Prediction Dataset. Visualises emerging skill demand through 2035.</p>
+          <div class="pc-tags"><span>Tableau</span><span>Cedefop Data</span><span>Labour Analytics</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       EXPERIENCE / EDUCATION
+  ====================================================== -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-label">Journey</div>
+        <h2 class="section-title">Experience &amp; Education</h2>
+      </div>
+
+      <div class="exp-layout">
+        <!-- Timeline -->
+        <div class="timeline">
+
+          <div class="tl-item reveal-up" style="--d:0ms">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass-card">
+              <div class="tl-date">Feb 2026</div>
+              <h3>AI Engineer Bootcamp</h3>
+              <div class="tl-org">Accenture · Riga</div>
+              <ul class="tl-list">
+                <li>Built multi-agent systems with CrewAI, LangGraph, LlamaIndex</li>
+                <li>Content moderation pipeline — 98% accuracy, 30 sec/post</li>
+                <li>RAG evaluation with DeepEval + Azure OpenAI judge models</li>
+                <li>Semantic search: hybrid BM25 + FAISS vector indexing</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item reveal-up" style="--d:100ms">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass-card">
+              <div class="tl-date">Sep 2024 – Jun 2026</div>
+              <h3>M.Sc. Computer Science — Data Analytics & AI</h3>
+              <div class="tl-org">TSI Latvia · UWE Bristol</div>
+              <ul class="tl-list">
+                <li>ML & Predictive Analytics, Big Data, Data Mining</li>
+                <li>Business Intelligence & Data Visualization, Cybersecurity</li>
+                <li>Thesis: SHAP instability in ensemble credit-risk models</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item reveal-up" style="--d:200ms">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass-card">
+              <div class="tl-date">Nov 2015 – Aug 2024</div>
+              <h3>Senior Associate</h3>
+              <div class="tl-org">State Bank of India</div>
+              <ul class="tl-list">
+                <li>Full-service retail banking — NEFT/RTGS, loans, insurance cross-sell</li>
+                <li>Compliance & accuracy in cash handling and financial records</li>
+                <li>Certified JAIIB & CAIIB (IIBF) — risk, operations, compliance</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item reveal-up" style="--d:300ms">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass-card">
+              <div class="tl-date">Jul 2011 – May 2014</div>
+              <h3>B.Sc. Mathematics</h3>
+              <div class="tl-org">Mahatma Gandhi University</div>
+              <ul class="tl-list">
+                <li>Calculus, Linear Algebra, Probability & Statistics, Operations Research</li>
+                <li>Project: Exploration of Catalan Numbers</li>
+                <li>Distinction graduate — Math topper at university level</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Achievements sidebar -->
+        <div class="achievements-col">
+          <div class="section-label reveal-up">Achievements</div>
+          <div class="ach-cards">
+            <div class="ach-card glass-card reveal-up" style="--d:0ms">
+              <div class="ach-icon">🏆</div>
+              <p>Distinction at all academic levels — school, undergraduate, and master's</p>
+            </div>
+            <div class="ach-card glass-card reveal-up" style="--d:100ms">
+              <div class="ach-icon">🔬</div>
+              <p>Novel XAI metrics for credit default prediction — to be presented at conferences in Latvia</p>
+            </div>
+            <div class="ach-card glass-card reveal-up" style="--d:200ms">
+              <div class="ach-icon">💻</div>
+              <p>Remote Data Science internship completed — Summer 2025</p>
+            </div>
+            <div class="ach-card glass-card reveal-up" style="--d:300ms">
+              <div class="ach-icon">🏦</div>
+              <p>Certified JAIIB & CAIIB — advanced banking, risk, and regulatory compliance</p>
+            </div>
+            <div class="ach-card glass-card reveal-up" style="--d:400ms">
+              <div class="ach-icon">🧮</div>
+              <p>Math topper at school and pre-master university level</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CONTACT
+  ====================================================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-sub">Open to research collaborations, data science roles, and conversations about XAI, credit risk, or agentic AI.</p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Info -->
+        <div class="contact-info reveal-left">
+          <div class="contact-item">
+            <div class="ci-icon">✉</div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:uzvarabyte@gmail.com">uzvarabyte@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">in</div>
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/anjalishibu" target="_blank">linkedin.com/in/anjalishibu</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">⌥</div>
+            <div>
+              <strong>GitHub</strong>
+              <a href="https://github.com/anjalii-s" target="_blank">github.com/anjalii-s</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📍</div>
+            <div>
+              <strong>Location</strong>
+              <span>Riga, Latvia</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form class="contact-form glass-card reveal-right" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="cf-name">Your Name</label>
+            <input type="text" id="cf-name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email Address</label>
+            <input type="email" id="cf-email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" placeholder="Research collaboration / Job opportunity..." />
+          </div>
+          <div class="form-group">
+            <label for="cf-msg">Message</label>
+            <textarea id="cf-msg" rows="5" placeholder="Hello Anjali, I'd love to discuss..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Send Message</span>
+            <svg viewBox="0 0 20 20" fill="none"><path d="M2 10l16-8-8 16-2-6-6-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Thanks! Your message has been sent.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© 2026 Anjali Shibu — Data Scientist & AI Researcher · Riga, Latvia</p>
+      <div class="footer-socials">
+        <a href="mailto:uzvarabyte@gmail.com" aria-label="Email">✉</a>
+        <a href="https://www.linkedin.com/in/anjalishibu" target="_blank" aria-label="LinkedIn">in</a>
+        <a href="https://github.com/anjalii-s" target="_blank" aria-label="GitHub">⌥</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
