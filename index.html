@@ -1,253 +1,48 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anjali Shibu | Data & AI </title>
-    
-    <meta name="title" content="Anjali Shibu — Data & AI" />
-    <meta name="description" content="Portfolio of Anjali Shibu – Expert in XAI, Credit Risk Analytics, and Agentic AI Systems. M.Sc. Data Analytics & AI." />
-    <meta name="keywords" content="Data Scientist, AI Researcher, XAI, Machine Learning, Riga, Latvia, Credit Risk, SHAP" />
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-badge reveal-up">
+      <span class="badge-dot"></span>
+      M.Sc. Candidate · Seeking Data & AI Roles
+    </div>
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yourportfolio.com/" />
-    <meta property="og:title" content="Anjali Shibu | Data  & AI " />
-    <meta property="og:description" content="8+ years of banking expertise meets cutting-edge ML research." />
-    <meta property="og:image" content="https://yourportfolio.com/preview-image.png" />
+    <h1 class="hero-name reveal-up">
+      Anjali<br>
+      <span class="shimmer-text">Shibu</span>
+    </h1>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    
-    <link rel="stylesheet" href="style.css" />
-    
-    <link rel="icon" type="image/png" href="favicon.png" />
-</head>
-<body>
+    <p class="hero-title reveal-up">Master’s Student | AI Researcher</p>
 
-    <div class="cursor" id="cursor" aria-hidden="true"></div>
-    <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+    <p class="hero-tagline reveal-up">
+      Transitioning 8+ years of banking expertise into **Data Science** and **AI research**. 
+      Currently finalizing research on Explainability in ensemble machine learning to improve credit risk stability.
+    </p>
 
-    <header>
-        <nav class="navbar" id="navbar">
-            <div class="nav-inner">
-                <a href="#hero" class="nav-logo" aria-label="Anjali Shibu Home">AS<span class="dot">.</span></a>
+    <div class="hero-cta reveal-up">
+      <a href="#projects" class="btn btn-primary">View My Research</a>
+      <a href="#contact" class="btn btn-ghost">Let's Connect</a>
+    </div>
+  </div>
+</section>
 
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-
-                <div class="nav-actions">
-                    <button class="theme-toggle" id="themeToggle" aria-label="Switch between light and dark mode">
-                        <span class="toggle-icon sun">☀</span>
-                        <span class="toggle-icon moon">◑</span>
-                    </button>
-                    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle Menu">
-                        <span></span><span></span><span></span>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
-        <nav>
-            <ul>
-                <li><a href="#about" class="mob-link">About</a></li>
-                <li><a href="#skills" class="mob-link">Skills</a></li>
-                <li><a href="#projects" class="mob-link">Projects</a></li>
-                <li><a href="#experience" class="mob-link">Experience</a></li>
-                <li><a href="#contact" class="mob-link">Contact</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <main>
-        <section class="hero" id="hero">
-            <div class="hero-bg" aria-hidden="true">
-                <div class="orb orb-1"></div>
-                <div class="orb orb-2"></div>
-                <div class="orb orb-3"></div>
-                <div class="grid-overlay"></div>
-            </div>
-
-            <div class="hero-content">
-                <div class="hero-badge reveal-up" style="--d:0ms">
-                    <span class="badge-dot"></span>
-                    Available for opportunities · Riga, Latvia
-                </div>
-
-                <h1 class="hero-name reveal-up" style="--d:120ms">
-                    Anjali<br>
-                    <span class="shimmer-text">Shibu</span>
-                </h1>
-
-                <p class="hero-title reveal-up" style="--d:240ms">M.Sc. Data Analytics &amp; AI</p>
-
-                <p class="hero-tagline reveal-up" style="--d:360ms">
-                    Turning financial data into explainable intelligence —<br class="br-desk">
-                    bridging 8+ years of banking with cutting-edge ML research.
-                </p>
-
-                <div class="hero-cta reveal-up" style="--d:480ms">
-                    <a href="#projects" class="btn btn-primary">
-                        <span>View My Work</span>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </a>
-                    <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-                </div>
-
-                <div class="hero-stats reveal-up" style="--d:600ms">
-                    <div class="stat"><span class="stat-n">8+</span><span class="stat-l">Years Experience</span></div>
-                    <div class="stat-div" aria-hidden="true"></div>
-                    <div class="stat"><span class="stat-n">0.997</span><span class="stat-l">AUC Score</span></div>
-                    <div class="stat-div" aria-hidden="true"></div>
-                    <div class="stat"><span class="stat-n">6+</span><span class="stat-l">AI Projects</span></div>
-                </div>
-            </div>
-
-            <div class="scroll-indicator" aria-hidden="true">
-                <div class="scroll-line"></div>
-                <span>scroll</span>
-            </div>
-        </section>
-
-        <section class="section about-section" id="about">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-image-wrap reveal-left">
-                        <div class="about-img-frame">
-                            <img src="photo.png" alt="Anjali Shibu - Professional Portrait" class="about-img" id="profileImg" loading="lazy" />
-                            <div class="img-glow"></div>
-                        </div>
-                        <div class="float-chip chip-1"><span>🏆</span> Distinction Graduate</div>
-                        <div class="float-chip chip-2"><span>🔬</span> XAI Researcher</div>
-                    </div>
-
-                    <div class="about-text reveal-right">
-                        <header>
-                            <div class="section-label">About Me</div>
-                            <h2 class="section-title">Research meets<br>real-world impact</h2>
-                        </header>
-
-                        <p class="about-bio">
-                            I'm a data scientist and AI researcher combining 8+ years of banking expertise with academic research in explainable machine learning. My work at the intersection of <strong>credit risk</strong>, <strong>regulatory AI</strong>, and <strong>ensemble methods</strong> is shaping how financial institutions interpret and trust ML models.
-                        </p>
-                        
-                        <div class="about-highlights">
-                            <div class="highlight-item">
-                                <span class="hi-icon" aria-hidden="true">🎓</span>
-                                <div><strong>TSI Latvia · UWE Bristol</strong><span>M.Sc. Data Analytics & AI</span></div>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="hi-icon" aria-hidden="true">🤖</span>
-                                <div><strong>Accenture AI Bootcamp</strong><span>Multi-Agent Systems</span></div>
-                            </div>
-                        </div>
-
-                        <div class="about-links">
-                            <a href="https://www.linkedin.com/in/anjalishibu" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
-                            <a href="https://github.com/anjalii-s" target="_blank" rel="noopener" class="social-pill">GitHub</a>
-                            <a href="mailto:uzvarabyte@gmail.com" class="social-pill">Email</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section skills-section" id="skills">
-            <div class="container">
-                <header class="section-header reveal-up">
-                    <div class="section-label">Expertise</div>
-                    <h2 class="section-title">Skills &amp; Technologies</h2>
-                </header>
-
-                <div class="skill-tabs reveal-up" role="tablist">
-                    <button class="stab active" data-tab="tech" role="tab" aria-selected="true">Technical</button>
-                    <button class="stab" data-tab="domain" role="tab" aria-selected="false">Domain</button>
-                    <button class="stab" data-tab="tools" role="tab" aria-selected="false">Tools</button>
-                </div>
-
-                <div class="skill-panel active" id="tab-tech" role="tabpanel">
-                    <div class="skills-grid">
-                        <div class="skill-bar-item reveal-up">
-                            <div class="sb-header"><span>Python</span><span class="sb-pct">92%</span></div>
-                            <div class="sb-track"><div class="sb-fill" style="width: 92%"></div></div>
-                        </div>
-                        </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section projects-section" id="projects">
-            <div class="container">
-                <header class="section-header reveal-up">
-                    <div class="section-label">Work</div>
-                    <h2 class="section-title">Featured Projects</h2>
-                </header>
-
-                <div class="projects-grid">
-                    <article class="project-card card-featured reveal-up">
-                        <div class="pc-top">
-                            <div class="pc-badges">
-                                <span class="pc-badge badge-research">Master's Thesis</span>
-                            </div>
-                            <div class="pc-icon" aria-hidden="true">🔬</div>
-                        </div>
-                        <h3 class="pc-title">XAI in Ensemble ML for Loan Default Prediction</h3>
-                        <p class="pc-desc">Developing novel metrics to quantify SHAP instability in ensemble models for imbalanced credit risk datasets.</p>
-                        <div class="pc-tags">
-                            <span>SHAP</span><span>XGBoost</span><span>Credit Risk</span><span>XAI</span>
-                        </div>
-                    </article>
-                    </div>
-            </div>
-        </section>
-
-        <section class="section contact-section" id="contact">
-            <div class="container">
-                <div class="contact-layout">
-                    <div class="contact-info reveal-left">
-                        <h2 class="section-title">Let's Connect</h2>
-                        <p>Open to research collaborations and data science roles.</p>
-                        </div>
-
-                    <form class="contact-form glass-card reveal-right" id="contactForm">
-                        <div class="form-group">
-                            <label for="cf-name">Your Name</label>
-                            <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="cf-email">Email Address</label>
-                            <input type="email" id="cf-email" name="email" placeholder="jane@example.com" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="cf-msg">Message</label>
-                            <textarea id="cf-msg" name="message" rows="5" placeholder="Hello Anjali..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">
-                            <span>Send Message</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer-inner">
-            <p class="footer-copy">© 2026 Anjali Shibu · Data Scientist & AI Researcher</p>
-            <div class="footer-socials">
-                <a href="https://linkedin.com/in/anjalishibu" aria-label="LinkedIn Profile" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://github.com/anjalii-s" aria-label="GitHub Profile" target="_blank" rel="noopener">GitHub</a>
-            </div>
+<section class="section about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <div class="about-img-frame">
+          <img src="photo.png" alt="Anjali Shibu" class="about-img" id="profileImg" />
         </div>
-    </footer>
+      </div>
 
-    <script src="script.js" defer></script>
-</body>
-</html>
+      <div class="about-text">
+        <div class="section-label">Academic Profile</div>
+        <h2 class="section-title">Research Meets<br>Practical Intelligence</h2>
+        <p class="about-bio">
+          I am currently pursuing an <strong>M.Sc. in Data Analytics & AI</strong> at TSI Latvia[cite: 3, 26]. With a strong foundation in <strong>Mathematics</strong> [cite: 28], I combine my academic rigor with 8 years of professional experience in high-trust banking environments.
+        </p>
+        <p class="about-bio">
+          My master's thesis focuses on <strong>Explainable AI (XAI)</strong> for loan-default prediction[cite: 13]. I have developed novel metrics to quantify the instability of SHAP models, directly addressing regulatory compliance needs in finance[cite: 14].
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
