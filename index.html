@@ -3,184 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjali Shibu | Data Analytics & AI Portfolio</title>
+    <title>Anjali Shibu - Data Analytics & AI</title>
+    
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS Styles -->
     <style>
         .bento-box {
-            background-color: rgba(24, 24, 27, 0.6);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 1.5rem;
-            padding: 1.5rem;
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            background-color: rgba(24, 24, 27, 0.5);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 2rem;
+            padding: 2rem;
+            overflow: hidden;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px) scale(1);
+            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), 
+                        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
         }
-        .bento-box:hover {
-            transform: translateY(-5px);
-            border-color: rgba(244, 63, 94, 0.4);
-            box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+
+        .bento-box.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .bento-box.visible:hover {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .bento-box::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .bento-box:hover::before {
+            opacity: 1;
+        }
+
+        .bento-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
     </style>
 </head>
-<body class="bg-zinc-950 text-zinc-300 font-sans selection:bg-rose-500/30">
-
-    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-rose-900/20 blur-[120px] rounded-full"></div>
-        <div class="absolute bottom-[10%] right-[0%] w-[30%] h-[30%] bg-amber-900/10 blur-[100px] rounded-full"></div>
+<body class="min-h-screen bg-zinc-950 text-zinc-50 font-sans selection:bg-rose-500/30 overflow-x-hidden">
+    
+    <!-- Dynamic Background -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
+        <div id="glow" class="absolute w-[600px] h-[600px] bg-rose-700/20 rounded-full blur-[120px] transition-transform duration-700 ease-out" style="transform: translate(-300px, -300px);"></div>
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-red-900/20 rounded-full blur-[150px] mix-blend-screen"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-amber-900/10 rounded-full blur-[120px] mix-blend-screen"></div>
     </div>
 
-    <main class="relative z-10 max-w-6xl mx-auto px-6 py-12 md:py-20">
+    <main class="relative z-10 max-w-7xl mx-auto p-4 md:p-8 pt-12 md:pt-20">
         
-        <header class="mb-16">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
-                <div>
-                    <h1 class="text-4xl md:text-6xl font-black text-white tracking-tighter mb-2">ANJALI SHIBU</h1>
-                    <p class="text-lg md:text-xl font-medium text-rose-400">Data Analytics & AI Professional</p>
-                </div>
-                <div class="flex gap-3">
-                    <a href="mailto:uzvarabyte@gmail.com" class="px-5 py-2.5 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all text-sm font-bold">Contact</a>
-                    <a href="https://linkedin.com/in/anjalishibu" target="_blank" class="px-5 py-2.5 bg-rose-600 text-white rounded-full hover:bg-rose-700 transition-all text-sm font-bold shadow-lg shadow-rose-900/20">LinkedIn</a>
-                </div>
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-12 px-4 opacity-0 translate-y-[-20px] transition-all duration-700 ease-out" id="header">
+            <div class="text-xl font-bold tracking-tighter flex items-center gap-2">
+                <div class="w-3 h-3 rounded-full bg-rose-600 animate-pulse"></div>
+                Anjali Shibu
             </div>
-            <p class="max-w-3xl text-zinc-400 leading-relaxed italic">
-                "Transitioning 8+ years of banking and insurance expertise into data-driven solutions[cite: 9, 17]. 
-                I specialize in building end-to-end pipelines—cleaning, transforming, and modeling real-world data 
-                with high-productivity AI-assisted workflows[cite: 11, 56, 62]."
-            </p>
+            <div class="flex gap-4">
+                <!-- Hardcoded SVGs (Adblockers cannot hide these) -->
+                <a href="https://www.linkedin.com/in/anjalishibu" target="_blank" rel="noreferrer" class="p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://github.com/anjalii-s" target="_blank" rel="noreferrer" class="p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </a>
+                <a href="mailto:uzvarabyte@gmail.com" class="p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+            </div>
         </header>
 
-        <section class="mb-16">
-            <h2 class="text-xs uppercase tracking-[0.3em] text-zinc-500 font-bold mb-8 flex items-center gap-4">
-                Full Project Gallery <div class="h-[1px] flex-1 bg-zinc-800"></div>
-            </h2>
+        <!-- Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-auto">
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <div class="bento-box md:col-span-2 lg:col-span-2 border-rose-500/20">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="text-[10px] font-bold text-rose-400 bg-rose-400/10 px-2 py-1 rounded-md uppercase">Master Thesis</span>
-                        <span class="text-[10px] font-bold text-zinc-500 italic">AI-Assisted Workflow</span>
+            <!-- 1. Hero / Intro (Now spans full width to utilize space) -->
+            <div class="bento-box md:col-span-4 md:row-span-2 flex flex-col justify-center" data-delay="100">
+                <div class="bento-content">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-600/10 border border-rose-500/20 text-rose-300 w-fit mb-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+                        <span class="text-sm font-semibold tracking-wide uppercase">Open to new opportunities</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">R-Myerson: Explainable AI for Credit Risk</h3>
-                    <p class="text-sm text-zinc-400 mb-6 leading-relaxed">
-                        Developed a novel game-theoretic method to address SHAP instability in imbalanced financial datasets[cite: 13, 14]. 
-                        Improved model interpretability for regulatory compliance in loan-default prediction[cite: 14, 83].
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1]">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-red-400 to-amber-300">
+                            Data Analytics & AI
+                        </span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-zinc-400 max-w-3xl leading-relaxed font-medium">
+                        Bridging the gap between complex machine learning models and strict financial regulatory compliance through Explainable AI (XAI).
                     </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="text-xs font-mono text-zinc-500">Python</span>
-                        <span class="text-xs font-mono text-zinc-500">XAI</span>
-                        <span class="text-xs font-mono text-zinc-500">Credit Risk</span>
-                    </div>
-                </div>
-
-                <div class="bento-box">
-                    <span class="text-[10px] font-bold text-amber-400 bg-amber-400/10 px-2 py-1 rounded-md uppercase mb-4 inline-block">Agentic AI</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Multi-Agent Systems</h3>
-                    <p class="text-xs text-zinc-400 mb-4">
-                        Built content moderation pipelines using CrewAI and LangGraph[cite: 37]. 
-                        Achieved 98% accuracy through orchestrator-worker patterns and RAG evaluation[cite: 37, 40].
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs font-mono text-zinc-500">CrewAI</span>
-                        <span class="text-xs font-mono text-zinc-500">LlamaIndex</span>
-                    </div>
-                </div>
-
-                <div class="bento-box">
-                    <span class="text-[10px] font-bold text-blue-400 bg-blue-400/10 px-2 py-1 rounded-md uppercase mb-4 inline-block">Big Data & Cleaning</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Ethereum Fraud Detection</h3>
-                    <p class="text-xs text-zinc-400 mb-4">
-                        Cleaned and transformed 50+ features from 9k+ transactions using PySpark[cite: 56, 57]. 
-                        Achieved AUC ≈ 0.997 with SHAP explainability[cite: 57].
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs font-mono text-zinc-500">PySpark</span>
-                        <span class="text-xs font-mono text-zinc-500">MLlib</span>
-                    </div>
-                </div>
-
-                <div class="bento-box">
-                    <span class="text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-2 py-1 rounded-md uppercase mb-4 inline-block">NLP Pipeline</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Latvian Financial Agent</h3>
-                    <p class="text-xs text-zinc-400 mb-4">
-                        Automated extraction of financial ratios from Latvian PDFs[cite: 52]. 
-                        Implemented RAG for sector-specific insight generation[cite: 53].
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs font-mono text-zinc-500">Gradio</span>
-                        <span class="text-xs font-mono text-zinc-500">RAG</span>
-                    </div>
-                </div>
-
-                <div class="bento-box">
-                    <span class="text-[10px] font-bold text-purple-400 bg-purple-400/10 px-2 py-1 rounded-md uppercase mb-4 inline-block">Transformation</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Currency Forecasting</h3>
-                    <p class="text-xs text-zinc-400 mb-4">
-                        Preprocessed 141 macro-financial observations from Latvijas Banka[cite: 61, 62]. 
-                        Engineered 21 features with stationarity testing and log transforms[cite: 63, 64].
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs font-mono text-zinc-500">SARIMAX</span>
-                        <span class="text-xs font-mono text-zinc-500">Time-Series</span>
-                    </div>
-                </div>
-
-                <div class="bento-box md:col-span-2 lg:col-span-1 bg-zinc-900/40">
-                    <h3 class="text-lg font-bold text-white mb-4">BI & Visualization</h3>
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center p-2 bg-black/20 rounded-lg border border-white/5">
-                            <span class="text-xs font-bold text-zinc-300">Cybersecurity Threats</span>
-                            <span class="text-[10px] text-blue-500 font-bold">POWER BI</span>
-                        </div>
-                        <div class="flex justify-between items-center p-2 bg-black/20 rounded-lg border border-white/5">
-                            <span class="text-xs font-bold text-zinc-300">Baltic Workforce 2035</span>
-                            <span class="text-[10px] text-rose-500 font-bold">TABLEAU</span>
-                        </div>
-                        <div class="flex justify-between items-center p-2 bg-black/20 rounded-lg border border-white/5">
-                            <span class="text-xs font-bold text-zinc-300">Data Science Salaries</span>
-                            <span class="text-[10px] text-rose-500 font-bold">TABLEAU</span>
-                        </div>
-                        <div class="flex justify-between items-center p-2 bg-black/20 rounded-lg border border-white/5">
-                            <span class="text-xs font-bold text-zinc-300">OCD Patient Data</span>
-                            <span class="text-[10px] text-rose-500 font-bold">TABLEAU</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-            <div>
-                <h2 class="text-xs uppercase tracking-[0.3em] text-zinc-500 font-bold mb-6">Expertise Stack</h2>
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 bg-white/5 rounded-full text-sm border border-white/10 text-white">Python (Advanced Cleaning)</span>
-                    <span class="px-4 py-2 bg-white/5 rounded-full text-sm border border-white/10 text-white">SQL</span>
-                    <span class="px-4 py-2 bg-white/5 rounded-full text-sm border border-white/10 text-white">Tableau & Power BI</span>
-                    <span class="px-4 py-2 bg-white/5 rounded-full text-sm border border-white/10 text-white">PySpark Big Data</span>
-                    <span class="px-4 py-2 bg-white/5 rounded-full text-sm border border-white/10 text-white">AI Agents (CrewAI)</span>
                 </div>
             </div>
-            <div>
-                <h2 class="text-xs uppercase tracking-[0.3em] text-zinc-500 font-bold mb-6">Professional Foundations</h2>
-                <div class="space-y-4">
-                    <div class="flex gap-4">
-                        <div class="text-rose-400 font-bold text-sm">8+ Yrs</div>
-                        <p class="text-xs text-zinc-400">Banking Operations & Risk Compliance (SBI) [cite: 18, 19]</p>
+
+            <!-- 2. Continuous Learner -->
+            <div class="bento-box md:col-span-2 bg-gradient-to-br from-rose-900/40 to-zinc-900/50 border-rose-500/20" data-delay="200">
+                <div class="bento-content flex-row items-start gap-4">
+                    <div class="p-4 rounded-2xl bg-rose-600/20 text-rose-300 shrink-0 hidden sm:block">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M9 13a4.5 4.5 0 0 0 3-4"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M12 13h4"/><path d="M12 18h6a2 2 0 0 1 2 2v1"/><path d="M12 8h8"/><path d="M16 8V5a2 2 0 0 1 2-2"/><circle cx="16" cy="13" r=".5"/><circle cx="18" cy="3" r=".5"/><circle cx="20" cy="21" r=".5"/><circle cx="20" cy="8" r=".5"/></svg>
                     </div>
-                    <div class="flex gap-4">
-                        <div class="text-amber-400 font-bold text-sm">M.Sc.</div>
-                        <p class="text-xs text-zinc-400">Data Analytics & AI (TSI Latvia / UWE Bristol) [cite: 25, 26]</p>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Highly Adaptable Learner</h3>
+                        <p class="text-zinc-300 leading-relaxed text-lg">
+                            Beyond my current tech stack, I am highly adaptable and <strong class="text-white">open to learn anything new needed for new roles</strong>. I thrive in environments that challenge me to acquire new skills rapidly.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <footer class="mt-20 pt-8 border-t border-zinc-900 text-center">
-            <p class="text-[10px] text-zinc-600 uppercase tracking-widest italic">
-                Utilizing AI-Assisted Tools for Greater Productivity and Precision © 2026 
+            <!-- 3. Background -->
+            <div class="bento-box md:col-span-2" data-delay="300">
+                <div class="bento-content">
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        Background
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 text-sm font-bold text-zinc-500 pt-1">24-26</div>
+                            <div>
+                                <h4 class="font-bold text-zinc-100 text-lg">M.Sc. Data Analytics & AI</h4>
+                                <p class="text-zinc-400 text-sm">TSI, Latvia / UWE Bristol</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 text-sm font-bold text-zinc-500 pt-1">8+ Yrs</div>
+                            <div>
+                                <h4 class="font-bold text-zinc-100 text-lg">Senior Associate (Banking)</h4>
+                                <p class="text-zinc-400 text-sm">State Bank of India • Retail & Compliance</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 text-sm font-bold text-zinc-500 pt-1">11-14</div>
+                            <div>
+                                <h4 class="font-bold text-zinc-100 text-lg">B.Sc. Mathematics</h4>
+                                <p class="text-zinc-400 text-sm">Mahatma Gandhi University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Master Thesis Highlight -->
+            <div class="bento-box md:col-span-4 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-zinc-900/80 bg-blend-overlay border-amber-500/20" data-delay="400">
+                <div class="bento-content grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">
+                            Master Thesis & Research
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight text-white">
+                            Game-Theoretic Feature Attribution for Imbalance Credit Risk
+                        </h2>
+                        <p class="text-zinc-400 text-lg leading-relaxed mb-6">
+                            Developed the <strong class="text-zinc-200">Redistributed-Myerson (R-Myerson)</strong> method to address the instability of SHAP in highly imbalanced, correlated financial datasets.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-black/40 p-6 rounded-3xl border border-white/5">
+                            <div class="text-3xl font-black text-rose-400 mb-2">5</div>
+                            <div class="text-sm text-zinc-400 font-medium">Datasets Analyzed (Real & Synthetic)</div>
+                        </div>
+                        <div class="bg-black/40 p-6 rounded-3xl border border-white/5">
+                            <div class="text-3xl font-black text-amber-400 mb-2">XAI</div>
+                            <div class="text-sm text-zinc-400 font-medium">Accuracy-Interpretability Trade-off</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Skills -->
+            <div class="bento-box md:col-span-4" data-delay="500">
+                <div class="bento-content">
+                    <h3 class="text-xl font-bold mb-8 flex items-center gap-2 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-rose-400"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+                        Technical Arsenal
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-sm font-bold text-zinc-500 uppercase tracking-wider mb-4">Core Technologies</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-sm font-medium hover:bg-white/10 transition-colors cursor-default"><div class="w-1.5 h-1.5 rounded-full bg-rose-400"></div>Python</div>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-sm font-medium hover:bg-white/10 transition-colors cursor-default"><div class="w-1.5 h-1.5 rounded-full bg-rose-400"></div>SQL</div>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-sm font-medium hover:bg-white/10 transition-colors cursor-default"><div class="w-1.5 h-1.5 rounded-full bg-rose-400"></div>Machine Learning</div>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-sm font-medium hover:bg-white/10 transition-colors cursor-default"><div class="w-1.5 h-1.5 rounded-full bg-rose-400"></div>PyTorch & Keras</div>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-sm font-medium hover:bg-white/10 transition-colors cursor-default"><div class="w-1.5 h-1.5 rounded-full bg-rose-400"></div>HTML & CSS</div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-zinc-500 uppercase tracking-wider mb-4">Specializations</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-sm font-medium hover:bg-white/10 transition-colors cursor-default"><div class="w-1.5 h-1.5 rounded-full bg-rose-400"></div>Explainable AI (XAI)</div>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-sm font-medium hover:bg-white/10 transition-colors cursor-default"><div class="w-1.5 h-1.5 rounded-full bg-rose-400"></div>Time-Series Forecasting</div>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-sm font-medium hover:bg-white/10 transition-colors cursor-default"><div class="w-1.5 h-1.5 rounded-full bg-rose-400"></div>RAG & LLM Frameworks</div>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-sm font-medium hover:bg-white/10 transition-colors cursor-default"><div class="w-1.5 h-1.5 rounded-full bg-rose-400"></div>Tableau / PowerBI</div>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-sm font-medium hover:bg-white/10 transition-colors cursor-default"><div class="w-1.5 h-1.5 rounded-full bg-rose-400"></div>Big Data (PySpark)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Projects -->
+            <div class="bento-box md:col-span-4" data-delay="600">
+                <div class="bento-content">
+                    <h3 class="text-xl font-bold mb-8 flex items-center gap-2 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+                        Featured Projects
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <a href="#" class="group block bg-black/20 p-6 rounded-3xl border border-white/5 hover:bg-white/5 transition-colors">
+                            <h4 class="text-lg font-bold text-zinc-100 mb-2 flex justify-between items-center">
+                                AI Engineer Bootcamp
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-500 group-hover:text-rose-400 transition-colors"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </h4>
+                            <p class="text-sm text-zinc-400 mb-4">Built multi-agent systems using CrewAI, LangGraph, and LlamaIndex for content moderation (98% accuracy).</p>
+                            <div class="flex gap-2"><span class="text-xs font-bold text-rose-400 bg-rose-400/10 px-2 py-1 rounded-md">CrewAI</span><span class="text-xs font-bold text-rose-400 bg-rose-400/10 px-2 py-1 rounded-md">RAG</span></div>
+                        </a>
+                        <a href="#" class="group block bg-black/20 p-6 rounded-3xl border border-white/5 hover:bg-white/5 transition-colors">
+                            <h4 class="text-lg font-bold text-zinc-100 mb-2 flex justify-between items-center">
+                                Ethereum Fraud Detection
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-500 group-hover:text-rose-400 transition-colors"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </h4>
+                            <p class="text-sm text-zinc-400 mb-4">Distributed pipeline using PySpark processing 9k+ transactions. Achieved AUC ≈ 0.997 with SHAP explainability.</p>
+                            <div class="flex gap-2"><span class="text-xs font-bold text-rose-400 bg-rose-400/10 px-2 py-1 rounded-md">PySpark</span><span class="text-xs font-bold text-rose-400 bg-rose-400/10 px-2 py-1 rounded-md">SHAP</span></div>
+                        </a>
+                        <a href="#" class="group block bg-black/20 p-6 rounded-3xl border border-white/5 hover:bg-white/5 transition-colors">
+                            <h4 class="text-lg font-bold text-zinc-100 mb-2 flex justify-between items-center">
+                                Currency Forecasting
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-500 group-hover:text-rose-400 transition-colors"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </h4>
+                            <p class="text-sm text-zinc-400 mb-4">Supervised multivariate time-series model using 141 macro-financial observations. Compared Ridge, SARIMAX, etc.</p>
+                            <div class="flex gap-2"><span class="text-xs font-bold text-rose-400 bg-rose-400/10 px-2 py-1 rounded-md">SARIMAX</span><span class="text-xs font-bold text-rose-400 bg-rose-400/10 px-2 py-1 rounded-md">Time Series</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 py-8 text-center border-t border-white/10">
+            <p class="text-sm font-medium text-zinc-500">
+                © 2026 Anjali Shibu. Built with modern web technologies.
             </p>
         </footer>
     </main>
 
+    <!-- JavaScript -->
+    <script>
+        // Mouse tracking for the background glow
+        const glow = document.getElementById('glow');
+        window.addEventListener('mousemove', (e) => {
+            requestAnimationFrame(() => {
+                glow.style.transform = translate(${e.clientX - 300}px, ${e.clientY - 300}px);
+            });
+        });
+
+        // Fade in header on load
+        window.addEventListener('load', () => {
+            const header = document.getElementById('header');
+            header.style.opacity = '1';
+            header.style.transform = 'translateY(0)';
+        });
+
+        // Scroll Reveal Animations for Bento Boxes
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.getAttribute('data-delay') || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, delay);
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bento-box').forEach(box => {
+            observer.observe(box);
+        });
+    </script>
 </body>
 </html>
